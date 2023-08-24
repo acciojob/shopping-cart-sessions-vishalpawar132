@@ -11,6 +11,11 @@ const products = [
 
 // DOM elements
 const productList = document.getElementById("product-list");
+const cartList = document.getElementById("cart-list");
+const clearCartBtn = document.getElementById("clear-cart-btn");
+
+// Retrieve cart data from session storage
+let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
 // Render product list
 function renderProducts() {
@@ -80,4 +85,3 @@ cartList.addEventListener("click", (event) => {
 
 // Add event listener to clear-cart button
 clearCartBtn.addEventListener("click", clearCart);
-
